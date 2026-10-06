@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Random Duck!</title>
+</head>
+<style>
+h1 {text-align: center;}
+.container {
+  text-align: center;
+  height: 200px;
+  position: relative;
+  }
+button {
+  background-color:#9ACD32;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 8px;
+}
+button:hover {
+  background-color:#006400;
+  color: white;
+}
+</style>
+<body>
+	<h1>Random Duck 🦆</h1>
+	<div class="container">
+    <img th:src="${duck.url}" alt="Random duck" width="500">
+
+    <br><br>
+
+    <form action="/duck" method="get">
+        <button type="submit">Get new duck</button>
+    </form>
+    </div>
+	
+</body>
+</html>
